@@ -1,0 +1,407 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/*全域設定*/
+*,*:before,*:after{
+    box-sizing:border-box}
+
+body{
+	font-family: "微軟正黑體",sans-serif;
+}
+.wrap{
+    width: 1920px;
+    margin: 0 auto;
+    }
+a{
+	text-decoration:none;
+}
+/*至頂端*/
+.top a{
+	font-size: 35px;
+	color:#00251A;
+}
+.top a:hover{
+	color: #00CC99;
+}
+.top{
+	position:fixed;
+	right:0;
+	bottom:0;
+	
+  }
+/*follow*/
+.follow{
+    background: #F6F6F8;
+    display: flex;
+    justify-content:flex-end;
+}
+
+.follow li{
+	padding: 5px;
+}
+.follow li img{
+	padding-right:5px;
+}
+.fb{
+    border-right: 1px solid #CCCCCC;
+	padding-right:12px;	
+	color:#4267B2;
+}
+.twitter{
+	padding-right:395px;
+	color:#1DA1F2;
+}
+.follow li a:hover{
+	color:#BDC0BA;
+}
+
+
+.header-center{
+	display: flex;
+    justify-content:space-around;
+}
+
+.center-img h1 a{
+	display: block;
+	background-image: url(image/hexschool-logo.png);
+	width: 151px;
+	height: 36px;
+	text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.center-img h1 a:hover{
+	opacity: 0.8;
+
+}
+/*列表*/
+.item{
+	display: flex;
+
+}
+.item>li{
+	padding:25px 40px 0 40px;
+	
+}
+.item>li a{
+	color:#00251A;
+	font-weight:700;
+	display: block;	
+	padding:20px 10px 20px 10px;
+	border-bottom: 4px solid rgba(255, 255, 255, 0);
+	}
+
+.item li{
+	position: relative;
+	
+}
+
+.item li a::after {
+	content: '';
+	position: absolute;
+	right: 5px;
+	left:0px;
+    bottom: 0;
+ 	transition: all 0.3s;
+	width: 0%;
+
+  }
+
+  .item li a:hover::after{
+	border-bottom: 4px solid #00CC99;
+	width: 100%;
+  }
+  
+
+.drop2{
+	display:none;
+	background-color:rgba(255, 255, 255, .7);
+	position:absolute;
+    z-index:999;
+}
+
+.drop{
+	display:none;
+	background-color: rgba(255, 255, 255, .7);
+	position:absolute;
+    z-index:999;
+}
+
+.center-img{
+	padding-top:18px;
+}
+
+
+/*輪播*/
+.swiper {
+	width:1600px;
+	height:390px;
+  }
+  .swiper img{
+	width: 100%;
+	height:100%;
+  display: block;
+  }
+
+/*header img*/
+.pic-img{
+	position: relative;
+	background-image: url(image/header_background.png);
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 390px;
+
+}
+
+.pic-img2{
+	position: relative;
+	background-image: url(image/header_background.png);
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 390px;
+
+}
+.pic-img3{
+	position: relative;
+	background-image: url(image/header_background.png);
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 390px;
+
+}
+
+
+.pic-img h2,.pic-img2 h2,.pic-img3 h2{
+	background-color:rgba(255, 255, 255, 0.1);
+	width: 100%;
+	height: 35%;
+	color: #000;
+	font-size: 36px;
+	font-weight: 700;
+	position:absolute;
+	top: 120px;
+	padding-left:498px;
+	padding-top: 27px;
+	line-height: 43.2px;
+}	
+/*介紹資訊*/
+
+.main{
+	display: flex;
+	justify-content: center;
+	
+}
+.main>li{
+	width: 350px;	
+	margin:60px 15px;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px 0 gray;
+	padding: 20px;
+	
+}
+.main img{
+	padding:0 0 20px 80px;
+}
+.main li h3{
+	font-weight: 700;
+	font-size: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+.main>li>p{
+	line-height: 24px;
+}
+.jq img{
+	padding:50px 0;
+}
+
+.jq-list{
+	padding-left:30px ;
+	line-height: 24px;
+	list-style: disc;
+}
+
+
+
+
+/*表格*/
+.content-list h3{
+	font-size: 24px;
+	font-weight:700;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+.price{
+	margin: 0 auto;	
+}
+.price tr{
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	text-align: left;
+	
+}
+.price th{
+	padding: 6px 140px 6px 15px;
+	font-weight: 700;
+}
+.price td{
+	padding: 6px 140px 6px 15px;
+}
+.color-change{
+	color:#00CC99;
+}
+
+.price tr:hover{
+	background:#E4FFF8;
+    transition: all 0.8s;
+	cursor: pointer;
+}
+
+
+/*填資料*/
+.sheet{
+	background:linear-gradient(#E4FFF8,#A2DDCE);	
+	padding-bottom: 35px;
+	margin-top: 60px;
+
+}
+.sheet h3{
+	color:#00251A;
+	font-size:24px;
+	font-weight: 700;
+	text-align: center;
+	padding-top: 35px;
+	line-height: 28.8px;
+}
+
+.sheet label {
+	cursor: pointer;
+}
+
+.sheetall{
+	display: flex;
+}
+
+.sheet-list{
+	margin:28px 30px 0 600px;
+}
+
+.information input{
+	width: 350px;
+	padding: 7px;
+	margin-bottom: 15px;
+	margin-top:8px;	
+}
+.remark{
+	padding-top:28px;
+	
+}
+
+.remark textarea{
+	width:350px;
+	height: 180px;
+	padding-bottom: 20px;
+	margin-top: 8px;
+}
+
+.btn{
+	width:160px;
+	background: #00251A;
+	border: 1px solid #00251A;
+	color: #F6F6F8;
+	display: block;
+	padding:10px 60px;
+	
+}
+
+.btn-set{
+	display: flex;
+	justify-content:center;
+}
+.btn:hover{
+	background: #bfece1;
+	border: 1px solid #bfece1;
+	color: #00251A;
+	cursor: pointer;
+	transition: all 0.3s;
+
+}
+
+/*表尾*/
+.footer{
+	padding: 20px;
+	background: white;
+	display: flex;
+    justify-content:space-around;
+	line-height: 24px;
+	
+}
+.footer-img h1 a{
+	display: block;
+	background-image: url(image/hexschool-logo.png);
+	width: 151px;
+	height: 36px;
+	text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.footer-img h1 a:hover{
+	opacity: 0.8;
+}
+
+.footer li a{
+	color:#00CC99;
+}
+.footer li a:hover{
+	color:#00251A;
+	cursor: pointer;
+}
